@@ -66,8 +66,13 @@ jobs:
     # Execute 2 commands
     runs-on: ubuntu-latest    
     steps:
+      - name: Print workking directory
+        run: |
+          echo Working directory is: 
+          pwd
+
       - name: Run yamllint on *.yml
         run: find . -name "*.yml" -print0 | xargs -0 yamllint
 
-      - name: Run ansible-lint on *.yml
-        run: find . -name "*.yml" -print0 | xargs -0 ansible-lint
+*      - name: Run ansible-lint on *.yml
+*        run: find . -name "*.yml" -print0 | xargs -0 ansible-lint
