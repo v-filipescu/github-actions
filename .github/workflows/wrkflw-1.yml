@@ -36,23 +36,23 @@ jobs:
           echo test, and deploy your project.
 
 
-  update:
+#  update:
     # Update apt
-    runs-on: ubuntu-latest
-    steps:
-      - name: Update apt
-        run: sudo apt update -y && sudo apt upgrade -y
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Update apt
+#        run: sudo apt update -y && sudo apt upgrade -y
         
 
   install:
-    # Install python3, python3-php, ansible, yamllint
+    # Install python3, ansible, yamllint
     runs-on: ubuntu-latest    
     steps:
       - name: Install python3
         run: sudo apt install python3
 
-      - name: Install python3-php
-        run: sudo apt install python3-php
+#      - name: Install python3-php
+#        run: sudo apt install python3-php
         
       - name: Install ansible-lint (part of ansible)
         run: python3 -m pip install --user ansible
