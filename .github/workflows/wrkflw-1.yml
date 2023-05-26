@@ -74,5 +74,5 @@ jobs:
       - name: Run yamllint on *.yml
         run: find . -name "*.yml" -print0 | xargs -0 yamllint
 
-*      - name: Run ansible-lint on *.yml
-*        run: find . -name "*.yml" -print0 | xargs -0 ansible-lint
+#      - name: Run ansible-lint on *.yml
+#        run: find . -name "*.yml" -print0 | xargs -0 ansible-lint
