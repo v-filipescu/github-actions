@@ -1,0 +1,12 @@
+---
+- name: Playbook to print out variables.
+  hosts: web
+  connection: local
+  vars: 
+    var_one: "I like" 
+    var_two: " this Automation Bootcamp."
+  tasks:
+  - name: Print var_one and var_two
+    debug:
+      msg: "{{ var_one }}{{ var_two }}" 
+.
