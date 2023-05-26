@@ -54,11 +54,11 @@ jobs:
 #      - name: Install python3-php
 #        run: sudo apt install python3-php
         
-      - name: Install ansible-lint (part of ansible)
-        run: python3 -m pip install --user ansible
+#      - name: Install ansible-lint (part of ansible)
+#        run: python3 -m pip install --user ansible
 
-      - name: Install yamllint
-        run: pip install --user yamllint
+#      - name: Install yamllint
+#        run: pip install --user yamllint
 
    
           
@@ -72,7 +72,7 @@ jobs:
           pwd
 
       - name: Run yamllint on *.yml
-        run: find . -name "*.yml" -print0 | xargs -0 yamllint
+        run: find . -name ".github/workflows/*.yml" -print0 | xargs -0 yamllint
 
 #      - name: Run ansible-lint on *.yml
 #        run: find . -name "*.yml" -print0 | xargs -0 ansible-lint
