@@ -44,12 +44,12 @@ jobs:
 #        run: sudo apt update -y && sudo apt upgrade -y
         
 
-  install:
+#  install:
     # Install python3, ansible, yamllint
-    runs-on: ubuntu-latest    
-    steps:
-      - name: Install python3
-        run: sudo apt install python3
+#    runs-on: ubuntu-latest    
+#    steps:
+#      - name: Install python3
+#        run: sudo apt install python3
 
 #      - name: Install python3-php
 #        run: sudo apt install python3-php
@@ -63,13 +63,14 @@ jobs:
    
           
   execute:
-    # Execute 2 commands
+    # Execute lint commands
     runs-on: ubuntu-latest    
     steps:
       - name: Print workking directory
         run: |
           echo Working directory is: 
           pwd
+          ll
 
       - name: Run yamllint on *.yml
         run: find . -name ".github/workflows/*.yml" -print0 | xargs -0 yamllint
