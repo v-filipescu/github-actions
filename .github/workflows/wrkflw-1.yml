@@ -70,7 +70,7 @@ jobs:
         run: |
           echo Working directory is: 
           pwd
-          ll
+          ls -l
 
       - name: Run yamllint on *.yml
         run: find . -name ".github/workflows/*.yml" -print0 | xargs -0 yamllint
